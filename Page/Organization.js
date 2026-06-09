@@ -11,13 +11,6 @@ export class Org_details{
         this.button = page.locator('(//input[@value="  Save  "])[1]')
     }
 
-    //  async sign_in(){
-    //     await this.page.goto(logi.url)
-    //     await this.page.locator('//input[@name="user_name"]').fill(logi.username)
-    //     await this.page.locator('//input[@name="user_password"]').fill(logi.password)
-    //     await this.page.getByRole('button', { name: 'Login' }).click()     //this method is created for login details so we can use this method anywhere
-    // }
-
      async create_org(OrganizationName, Phone) {
         await this.clickOrg.click()
         await this.createOrg.click()

@@ -11,13 +11,6 @@ export class campaigns_details{
         this.save = page.locator('(//input[@type="submit"])[1]')
     }
 
-    // async sign_in(){
-    //     await this.page.goto(logi.url)
-    //     await this.page.locator('//input[@name="user_name"]').fill(logi.username)
-    //     await this.page.locator('//input[@name="user_password"]').fill(logi.password)
-    //     await this.page.getByRole('button', { name: 'Login' }).click()     //this method is created for login details so we can use this method anywhere
-    // }
-
     //using utils random_number
      async create_campaign(campaignName) {
 
