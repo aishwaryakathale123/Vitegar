@@ -11,7 +11,7 @@ export class campaigns_details{
         this.save = page.locator('(//input[@type="submit"])[1]')
     }
 
-    //using utils random_number
+    //utils- random_number
      async create_campaign(campaignName) {
 
         await this.ClickMore.hover()
