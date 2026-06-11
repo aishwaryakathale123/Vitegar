@@ -13,17 +13,13 @@ test('',async({page})=>{
     await page.goto('http://localhost:8888/index.php?action=index&module=Home')
 
     //login page-
-    await page.waitForTimeout(2000)
     await page.locator('//input[@name="user_name"]').fill('admin')
     await page.locator('//input[@name="user_password"]').fill('admin')
-    await page.waitForTimeout(2000)
     await page.locator('//input[@id="submitButton"]').click()
-    await page.waitForTimeout(2000)
 
     //Compaigns-
     await page.locator('//a[text()="More"]').hover()
     await page.locator('//a[text()="Campaigns"]').click()
-    await page.waitForTimeout(2000)
 
     await page.locator('//img[@title="Create Campaign..."]').click()
     await page.locator('//input[@name="campaignname"]').fill('CRM Discount Offer')
@@ -71,13 +67,6 @@ test('Campaigns POM',async({page})=>{
 
      // Using dropdown utility select value
     await dropdown(page.locator('//select[@name="campaigntype"]'),'Webinar')
-
-    // Select Product
-    //  let [txt1]=await Promise.all([
-    //     page.waitForEvent('popup'),
-    //     page.locator('//img[@title="Select"]').click()
-    // ])
-    // await txt1.locator('(//a[text()="CRM Automation Software"])[1]').click()
 
     //select product- pop up handling through utils
     let popup = await window(page,page.locator('//img[@title="Select"]').click())

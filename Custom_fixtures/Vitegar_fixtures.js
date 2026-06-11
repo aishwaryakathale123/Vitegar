@@ -6,7 +6,6 @@ import {Opportunities_details} from '../Page/Opportunities.js'
 import {campaigns_details} from '../Page/Campaigns.js'
 import {Product_details} from '../Page/Products.js'
 
-
 export let test = base.extend({
 
     organization : async ({loginpage},use) => {

@@ -11,7 +11,6 @@ import { random } from '../../utils/random_number.js'
 //     await page.goto(login_details.url)
 
 //     //login page-
-//     await page.waitForTimeout(2000)
 //     await page.locator('//input[@name="user_name"]').fill(login_details.Username)
 //     await page.locator('//input[@name="user_password"]').fill(login_details.Password)
 //     await page.locator('//input[@id="submitButton"]').click()
@@ -47,7 +46,7 @@ test('Create Organization', async ({ page }) => {
     await expect(page.locator('//span[@class="lvtHeaderText"]')).toContainText('Creating New Organization');
 
     // Create Organization with random number
-    const orgName = await org.create_org(org_json.OrganizationName,org_json.Phone)
+    let orgName = await org.create_org(org_json.OrganizationName,org_json.Phone)
 
     // Verify Organization created successfully
     await expect(page.locator('.dvHeaderText')).toContainText(org_json.OrganizationName)

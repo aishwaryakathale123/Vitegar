@@ -6,31 +6,31 @@ import { random } from '../../utils/random_number.js'
 
 //-----------------------Simple way------------
 
-test('Organization',async({page})=>{
-    await page.goto('http://localhost:8888/index.php?action=index&module=Home')
+// test('Organization',async({page})=>{
+//     await page.goto('http://localhost:8888/index.php?action=index&module=Home')
 
-    //login page-
-    await page.waitForTimeout(2000)
-    await page.locator('//input[@name="user_name"]').fill(login_details.Username)
-    await page.locator('//input[@name="user_password"]').fill(login_details.Password)
-    await page.locator('//input[@id="submitButton"]').click()
+//     //login page-
+//
+//     await page.locator('//input[@name="user_name"]').fill(login_details.Username)
+//     await page.locator('//input[@name="user_password"]').fill(login_details.Password)
+//     await page.locator('//input[@id="submitButton"]').click()
 
-    await page.locator('(//a[text()="Opportunities"])[1]').click()
-    await page.locator('//img[@title="Create Opportunity..."]').click()
-    await page.locator('//input[@name="potentialname"]').fill(Opportunities_details.OpportunityName)
+//     await page.locator('(//a[text()="Opportunities"])[1]').click()
+//     await page.locator('//img[@title="Create Opportunity..."]').click()
+//     await page.locator('//input[@name="potentialname"]').fill(Opportunities_details.OpportunityName)
 
-    let [txt1]=await Promise.all([
-        page.waitForEvent('popup'),
-        page.locator('(//img[@title="Select"])[1]').click()
-    ])
-    await txt1.locator('//a[text()="ABC Technologies"]').click()
-    await page.locator('(//input[@type="submit"])[1]').click()
+//     let [txt1]=await Promise.all([
+//         page.waitForEvent('popup'),
+//         page.locator('(//img[@title="Select"])[1]').click()
+//     ])
+//     await txt1.locator('//a[text()="ABC Technologies"]').click()
+//     await page.locator('(//input[@type="submit"])[1]').click()
 
-})
+// })
 
 //-----------------------Using POM--------------
 
-test.only('Create Opportunities', async ({ page }) => {
+test('Create Opportunities', async ({ page }) => {
 
     let opp = new Opportunities_details(page)
 

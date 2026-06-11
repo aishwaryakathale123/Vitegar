@@ -10,21 +10,13 @@ import  random  from '../../utils/random_number.js'
 //     await page.goto(login_deatils.url)
 
 //     //login page-
-//     await page.waitForTimeout(2000)
 //     await page.locator('//input[@name="user_name"]').fill(login_deatils.Username)
 //     await page.locator('//input[@name="user_password"]').fill(login_deatils.Password)
-//     await page.waitForTimeout(2000)
 //     await page.locator('//input[@id="submitButton"]').click()
-//     await page.waitForTimeout(2000)
-
 //     await page.locator('//a[text()="Products"]').click()
-//     await page.waitForTimeout(2000)
 //     await page.locator('//img[@alt="Create Product..."]').click()
-//     await page.waitForTimeout(2000)
 //     await page.locator('//input[@name="productname"]').fill(product_details.ProductName)
-//     await page.waitForTimeout(2000)
 //     await page.locator('(//input[@type="submit"])[1]').click()
-//     await page.waitForTimeout(2000)
 // })
 
 //--------------------------Using POM----------------
